@@ -16,7 +16,7 @@ function remove_span($element) {
 	                $element->outertext = '';        
 }
 
-for ($i=1; $i <= 5; $i++) {
+for ($i=1; $i <= 16; $i++) {
 	$lolHTML = file_get_html('http://www.lolcatbible.com/index.php?title=Mark_'.$i); 	
 	$lolHTML->set_callback('remove_link');
 	foreach ($lolHTML->find('p') as $s) {
