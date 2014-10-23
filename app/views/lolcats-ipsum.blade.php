@@ -17,10 +17,11 @@
 		<br>
 		<span id='output' class='center-block'>
 			<?php 
-				for($i = 0, $size = count($generatedText); $i < $size; $i++){
-					echo "<p>".$generatedText[$i]."</p>";	
+				if(isset($_GET['getLOL'])) {
+					for($i = 0, $size = count($generatedText); $i < $size; $i++){
+						echo "<p>".$generatedText[$i]."</p>";	
+					}
 				}
-				
 			?>
 		</span>
 		<br>
@@ -28,7 +29,7 @@
 			<label for='numPar'>How many paragraphs would you like? (max 15)</label>
 			<input type='number' name='numPar' id='numPar' max='15' min='1'><br>
 			<br>
-			<button type='submit' class='btn btn-primary btn-lg center-block'>Click here to Laugh Out Loud</button>
+			<button type='submit' name='getLOL' class='btn btn-primary btn-lg center-block'>Click here to Laugh Out Latin</button>
 		</form>
 
 

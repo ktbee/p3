@@ -23,6 +23,6 @@ Route::get('lolcats-ipsum', function()
 
 Route::get('user-gen', function()
 {
-	echo 'This page is for User Generator';
+	return View::make('user-gen');
 });
 
