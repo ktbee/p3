@@ -7,7 +7,6 @@
 
 @section('head')
 	<?php require 'logic.php'; ?>
-	<link rel="stylesheet" type="text/css" href="css/lolcats-ipsum.css">
 @stop
 
 
@@ -15,7 +14,22 @@
 @section('content')
 		<h1 class="text-center">LOLcat Ipsum Generator</h1>
 		<br>
-		<span id='output' class='center-block'>
+		<span class="narrow-paragraph">
+			<p>Check out this tool for walls of text you can copy and paste to test your app. The text comes from the <a href="http://www.lolcatbible.com/index.php?title=Gospel_of_Mark">LOLcat Bible Book of Mark</a> and the latin text comes from <a href="http://la.wikisource.org/wiki/De_finibus_bonorum_et_malorum/Liber_Primus">a chunk of real Latin.</a> See if you can see the difference!</p>
+			<br>
+			<br>
+			<form method='GET' action={{ url('lolcats-ipsum')}}>
+				<label for='numPar'>How many paragraphs would you like? (max 15)</label>
+				<input type='number' name='numPar' id='numPar' max='15' min='1' required><br>
+				<br>
+				<br>
+				<button type='submit' name='getLOL' class='btn btn-lg'>Click here to Laugh Out Latin</button>
+			</form>
+		</span>
+		<br>
+		<br>
+		<br>
+		<span id='LOLoutput' class='output'>
 			<?php 
 				if(isset($_GET['getLOL'])) {
 					for($i = 0, $size = count($generatedText); $i < $size; $i++){
@@ -24,13 +38,7 @@
 				}
 			?>
 		</span>
-		<br>
-		<form method='GET' action='lolcats-ipsum' class='center-block'>
-			<label for='numPar'>How many paragraphs would you like? (max 15)</label>
-			<input type='number' name='numPar' id='numPar' max='15' min='1'><br>
-			<br>
-			<button type='submit' name='getLOL' class='btn btn-primary btn-lg center-block'>Click here to Laugh Out Latin</button>
-		</form>
+		<img src="grumpy-latin-cat.png">
 
 
 

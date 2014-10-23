@@ -7,7 +7,6 @@
 
 @section('head')
 	<?php require 'logic.php'; ?>
-	<!--<link rel="stylesheet" type="text/css" href="css/lolcats-ipsum.css"> -->
 @stop
 
 
@@ -16,7 +15,7 @@
 		<h1 class="text-center">Fake User Generator</h1>
 		<br>
 		<br>
-		<form method='GET' action='user-gen' class='center-block'>
+		<form method='GET' action={{ url('user-gen')}} class='center-block form'>
 			<label for='numUser'>How many users would you like? (max 99)</label>
 			<input type='number' name='numUser' id='numUser' max='99' min='1' required><br>
 			
@@ -30,20 +29,27 @@
 			<input type='checkbox' name='phone' id='phone'><br>
 			<br>
 			
-			<button type='submit' name='getUsers' class='btn btn-primary btn-lg center-block'>Get your users</button>
+			<button type='submit' name='getUsers' class='btn btn-lg center-block'>Get your users</button>
 		</form>
 		<br>
-		<span id='output' class='center-block'>
+		<br>
+		<span class='center-block output'>
 			<?php
 				if(isset($_GET['getUsers'])) {
 					for ($i=0; $i < $numUser; $i++) {
-						echo $faker->name, "<br>";
-						if (isset($_GET['birthday'])){
-							echo $faker->dateTimeThisCentury->format('Y-m-d')."<br>";
-						} if (isset($_GET['profile'])){
-							echo $faker->text."<br>";
-						}
-
+						echo "<span class=\"helper-text\">Full name: </span>".
+						$faker->name."<br>";
+							if (isset($_GET['birthday'])){
+								echo "<span class=\"helper-text\">Birthday: </span>".
+								$faker->dateTimeThisCentury->format('Y-m-d')."<br>";
+							} if (isset($_GET['profile'])){
+								echo "<span class=\"helper-text\">User profile: </span>".
+								$faker->text."<br>";
+							} if (isset($_GET['phone'])){
+								echo "<span class=\"helper-text\">Phone number: </span>".
+								$faker->phoneNumber."<br>";
+							}
+						echo "<br>";
 					}
 				}
 			?>
