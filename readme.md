@@ -19,5 +19,5 @@ I will be doing a screencast this weekend and updating this README file with the
 
 Below is the outside code I used:
 * [Bootstrap](http://getbootstrap.com/)
-* [Simple DOM HTML Parser](http://simplehtmldom.sourceforge.net/) to parse the content I scrapped.
+* [Simple DOM HTML Parser](http://simplehtmldom.sourceforge.net/) to parse the content I scraped.
 * [Faker by François Zaninotto](https://packagist.org/packages/fzaninotto/faker), which is a package for generating fake users
