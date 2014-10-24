@@ -1,7 +1,7 @@
 <?php
 
 // ******************** LOLCAT IPSUM CODE BELOW ************
-require app_path().'/includes/simplehtmldom_1_5/wordscrape.php';
+include app_path().'/includes/simplehtmldom_1_5/wordscrape.php';
 
 if(isset($_GET['getLOL'])) {
     $numPar = $_GET['numPar'];
