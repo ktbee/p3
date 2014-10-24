@@ -36,17 +36,11 @@
 					for($i = 0, $size = count($generatedText); $i < $size; $i++){
 						echo "<p>".$generatedText[$i]."</p>";	
 					}
-					echo "</span>";
+					echo "</span> <br>";
 				}
 			?>
 		</span>
 		<img src="grumpy-latin-cat.png">
 @stop
 
-@section('footer')
-	<script>
-			$( "button" ).click(function() {
-			  $( "#LOLoutput" ).addClass('output');
-			});
-	</script>
-@stop
+

@@ -29,7 +29,7 @@
 		<br>
 		<br>
 		<a href="{{ url('user-gen')}}"><h3>Fake User Generator</h3></a>
-		<p>Do you need to safely test your web application with users that won't mind your poking and proding? Do you need to save time when you create your fake identies online? You can use the fake profile generator below to get the content you need.
+		<p>Do you need to safely test your web application with users that won't mind your poking and proding? Do you need to save time when you create your fake identies online? You can use the fake profile generator to get the content you need.
 		</p>
 		
 @stop

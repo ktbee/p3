@@ -52,7 +52,7 @@
 							}
 						echo "<br>";
 					}
-					echo "</span>";
+					echo "</span> <br>";
 				}
 			?>
 		</span>
