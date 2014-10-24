@@ -18,7 +18,6 @@ if(isset($_GET['getLOL'])) {
 
 
 // ************* USER GENERATOR CODE BELOW ****************
-//include '..\vendor\fzaninotto\faker\src\autoload.php';
 
 $faker = Faker\Factory::create();
 

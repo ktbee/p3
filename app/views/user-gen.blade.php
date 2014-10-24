@@ -33,9 +33,10 @@
 		</form>
 		<br>
 		<br>
-		<span class='center-block output'>
+		<span class='center-block'>
 			<?php
 				if(isset($_GET['getUsers'])) {
+					echo "<span class=\"output center-block\">";
 					for ($i=0; $i < $numUser; $i++) {
 						echo "<span class=\"helper-text\">Full name: </span>".
 						$faker->name."<br>";
@@ -51,6 +52,7 @@
 							}
 						echo "<br>";
 					}
+					echo "</span>";
 				}
 			?>
 		</span>

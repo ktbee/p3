@@ -15,7 +15,7 @@
 		<h1 class="text-center">LOLcat Ipsum Generator</h1>
 		<br>
 		<span class="narrow-paragraph">
-			<p>Check out this tool for walls of text you can copy and paste to test your app. The text comes from the <a href="http://www.lolcatbible.com/index.php?title=Gospel_of_Mark">LOLcat Bible Book of Mark</a> and the latin text comes from <a href="http://la.wikisource.org/wiki/De_finibus_bonorum_et_malorum/Liber_Primus">a chunk of real Latin.</a> See if you can see the difference!</p>
+			<p>Check out this tool for walls of text you can copy and paste to test your app. The lolspeak comes from the <a href="http://www.lolcatbible.com/index.php?title=Gospel_of_Mark">LOLcat Bible Book of Mark</a> and the latin text comes from <a href="http://la.wikisource.org/wiki/De_finibus_bonorum_et_malorum/Liber_Primus">a chunk of real Latin.</a> See if you can see the difference!</p>
 			<br>
 			<br>
 			<form method='GET' action={{ url('lolcats-ipsum')}}>
@@ -29,17 +29,24 @@
 		<br>
 		<br>
 		<br>
-		<span id='LOLoutput' class='output'>
+		
 			<?php 
 				if(isset($_GET['getLOL'])) {
+					echo "<span id=\"LOLoutput\" class=\"output\">";
 					for($i = 0, $size = count($generatedText); $i < $size; $i++){
 						echo "<p>".$generatedText[$i]."</p>";	
 					}
+					echo "</span>";
 				}
 			?>
 		</span>
 		<img src="grumpy-latin-cat.png">
+@stop
 
-
-
+@section('footer')
+	<script>
+			$( "button" ).click(function() {
+			  $( "#LOLoutput" ).addClass('output');
+			});
+	</script>
 @stop
