@@ -36,7 +36,7 @@
 					for($i = 0, $size = count($generatedText); $i < $size; $i++){
 						echo "<p>".$generatedText[$i]."</p>";	
 					}
-					echo "</span> <br>";
+					echo "</span><br><br>";
 				}
 			?>
 		</span>
