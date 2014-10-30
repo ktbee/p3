@@ -15,6 +15,8 @@ This is a site for two tool meant to help developers and designer's when testing
 
 I will be doing a screencast this weekend and updating this README file with the jing link. I'm going to try to come to section Thursday, but in case I get out of work too late it will be here.
 
+//Updated 10/30/14 to include link to demo http://screencast.com/t/YHMpOKesJDk9
+
 ##Details for teaching team
 
 Below is the outside code I used:
